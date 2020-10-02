@@ -1,0 +1,144 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <meta charset="utf-8">
+  <title>flex</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+
+      body {
+          font-family: 'Open Sans', sans-serif;
+          margin: 0;
+      }
+      
+      .container{
+          display: flex;
+          flex-wrap: wrap;
+      }
+
+      header{
+          background-color: rgb(118, 199, 236); 
+          display: flex; 
+          flex-wrap: wrap;
+          flex-basis: 100%;
+          justify-content: flex-end;
+      }
+
+      header div {
+          background-color: rgb(118, 199, 236);
+          color: white;
+          padding: 10px;
+      }
+
+      .logo {
+          background-color: grey;
+          color: white;
+          padding: 10px 50px 10px;
+          margin-right: auto;
+      }
+
+      .side-bar-1 {
+          background-color: rgb(255, 252, 79);
+          flex-basis: calc(100%/6);
+          order: 1;
+          text-align: center;
+      }
+
+      .side-bar-2 {
+          background-color: rgb(233, 149, 219);
+          flex-basis: calc(100%/6);
+          order: 3;
+          text-align: center;
+      }
+
+      main {
+          background-color: cyan;
+          flex-basis: calc(100%/6*4 - 20px);
+          order: 2;
+          padding: 0 10px 30px 10px;
+      }
+
+      footer {
+          background-color: rgb(119, 212, 119);
+          display: flex;
+          flex-wrap: wrap;
+          flex-basis: 100%;
+          order: 4;
+          justify-content: flex-end;
+      }
+
+      .copyright {
+          color: black;
+          margin-right: auto;
+      }
+
+      footer div {
+          background-color: rgb(119, 212, 119);
+          color: white;
+          padding: 10px;
+      }
+
+      a {
+          text-decoration: none;
+          color: white;
+      }
+
+      .menu:hover {
+          background-color: rgb(199, 196, 196);
+      }
+
+      @media (max-width: 760px) {
+          .logo {flex-basis: 100%; text-align: center; position: relative;}
+          .logo::before {content:''; background-color: rgb(118, 199, 236); position: absolute; top: 0; left: 0; width: 40%; height: 100%;}
+          .logo::after {content:''; background-color: rgb(118, 199, 236); position: absolute; top: 0; right: 0; width: 40%; height: 100%;}
+          header {justify-content: space-around;}
+          main {flex-basis: 100%; order: 1;}
+          .side-bar-1 { flex-basis: calc(50% - 20px); padding: 10px;}
+          .side-bar-2 {flex-basis: calc(50% - 20px); padding: 10px;}
+          .copyright {flex-basis: 100%; text-align: center;}
+          footer {justify-content: space-around;}
+      }
+
+      @media (max-width: 375px) {
+          .container {flex-direction: column;}
+          .logo::before {width: 10%;}
+          .logo::after {width: 10%;}
+          .logo {margin: 0 auto;}
+          header {flex-direction: column; text-align: center;}
+          footer {flex-direction: column; text-align: center;}
+          .copyright {margin: 0 auto;}
+
+      }
+
+  </style> 
+</head> 
+<body> 
+
+    <div class="container">
+
+        <header>
+            <div class="logo">Logo</div>
+            <div class="menu"><a href="https://qna.habr.com/q/278514" target="blank">Главная</a></div>
+            <div class="menu"><a href="https://qna.habr.com/q/278514" target="blank">О нас</a></div>
+            <div class="menu"><a href="https://qna.habr.com/q/278514" target="blank">Продукты</a></div>
+            <div class="menu"><a href="https://qna.habr.com/q/278514" target="blank">Контакты</a></div>
+        </header>
+
+        <main class="main-part"><h1>Армения</h1>Армения – это государство на Кавказе, расположенное на границе Европы и Азии; бывшая союзная республика СССР. Армения является одной из древнейших христианских стран, поэтому здесь много важных религиозных памятников. Самыми известными среди них являются греко-римский храм Гарни и Эчмиадзинский кафедральный собор – построенный в IV веке главный храм Армянской церкви. Популярное место паломничества – монастырь Хор-Вирап. Он находится недалеко от горы Арарат, которая является бездействующим вулканом и находится на территории Турции.<h2>Геноцид армян</h2>Геноци́д армя́н — геноцид, организованный и осуществлённый в 1915 году на территориях, контролируемых властями Османской империи. Геноцид осуществлялся путём физического уничтожения и депортации, включая перемещение гражданского населения в условиях, приводящих к неминуемой смерти.</main>
+        
+        <aside class="side-bar-1">Aside type 1</aside>
+        
+        <aside class="side-bar-2">Aside type 2</aside>
+        
+        <footer>
+            <div class="copyright">&#169; Copyright 2020</div>
+            <div class="menu"><a href="https://qna.habr.com/q/278514" target="blank">Twitter</a></div>
+            <div class="menu"><a href="https://qna.habr.com/q/278514" target="blank">Vkontakte</a></div>
+            <div class="menu"><a href="https://qna.habr.com/q/278514" target="blank">Facebook</a></div>
+        </footer>
+
+    </div>
+
+</body> 
+</html>
+
