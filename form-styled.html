@@ -1,0 +1,178 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <meta charset="utf-8">
+  <title>form-styled</title> 
+  <style> 
+    
+    body {
+        margin: 40px;
+        font-family: 'Open Sans', sans-serif;
+        background-color: grey;
+    }
+
+    .form-frame {
+        border: solid rgb(102, 161, 250) 2px;
+        border-radius: 10px;
+        padding: 0;
+        background-color: white;
+        position: relative;
+    }
+
+    .form-inline .form-input__inline {
+        display: inline-block;
+        width: 60%;
+        margin: 0 20% 0 20%;
+        bottom: 35px;
+    }
+
+    .form-name {
+        color: white;
+        font-size: 27px;
+        background-color: rgb(102, 161, 250);
+        height: 50px;
+        width: 100%;
+        text-align: center;
+        padding-top: 15px;
+        text-indent: 50px;
+        position: relative;
+    }
+
+    .form-item {
+        margin: 20px;
+        color: rgb(104, 104, 104);
+        font-weight: bold;
+        font-size: 13px;
+    }
+
+    .form-item__name {
+        margin-left: 12px;
+    }
+
+    .form-item__line {
+        border: solid rgb(156, 155, 155) 2px;
+        font-size: 16px;
+        border-radius: 7px;
+        text-indent: 50px;
+        width: 100%;
+        height: 40px;
+        margin: 10px auto;
+    }
+
+    .form-item__line:focus {
+        border: solid rgb(11, 218, 255) 2px;
+    }
+
+    .form-item__text {
+        min-height: 100px;
+        min-width: 100%;
+        padding-top: 10px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .form-button {
+        color: white;
+        font-size: 16px;
+        background-color: rgb(102, 161, 250);
+        border: solid rgb(102, 161, 250);
+        border-radius: 7px;
+        height: 45px;
+        width: 230px;
+    }
+
+    .form-button__center {
+        height: 45px;
+        width: 230px;
+        margin: 30px auto 30px;
+    }
+
+    .form-input {
+        position: relative;
+    }
+
+    .form-item__sprite {
+        position: absolute;
+        z-index: 1;
+        background-image: url('sprait.png');
+        background-repeat: no-repeat;
+        width: 50px; 
+        height: 50px;
+    } 
+
+    .sprite-1 {
+        top: 5px;
+        left: 30%;
+        background-position: 0px -96px;
+    }
+
+    .sprite-2 {
+        top: 9px;
+        background-position: 0px 0px;
+    }
+
+    .sprite-3 {
+        top: 9px;
+        background-position: -96px -48px;
+    }
+
+    .sprite-4 {
+        top: 7px;
+        background-position: -96px -96px;
+    }
+
+    .sprite-5 {
+        top: 9px;
+        background-position: -96px 0px;
+    }
+
+  </style>
+</head> 
+<body> 
+
+  <form class="form-inline">
+
+    <fieldset class="form-frame">
+        
+    <div class="form-name">
+        <div class="form-item__sprite sprite-1"></div>
+        <legend>Обратная связь</legend>
+    </div>
+
+    <div class="form-item">
+        <label class="form-item__name" for="name">Имя:</label>
+    <div class="form-input form-input__inline"><div class="form-item__sprite sprite-2"></div>
+        <input class="form-item__line" name="name" type="text" placeholder="Введите Ваше имя">
+    </div>
+    </div>
+
+    <div class="form-item">
+        <label class="form-item__name" for="email">Email:</label>
+    <div class="form-input form-input__inline"><div class="form-item__sprite sprite-3"></div>
+        <input class="form-item__line" name="email" type="email" placeholder="Введите адрес Вашей почты">
+    </div>
+    </div>
+
+    <div class="form-item">
+        <label class="form-item__name" for="password">Телефон:</label>
+    <div class="form-input form-input__inline"><div class="form-item__sprite sprite-4"></div>
+        <input class="form-item__line" name="password" type="password" placeholder="Введите номер телефона">
+    </div>
+    </div>
+
+    <div class="form-item">
+        <label class="form-item__name" for="text">Сообщение:</label>
+    <div class="form-input"><div class="form-item__sprite sprite-5"></div>
+        <textarea class="form-item__line form-item__text" name="text" type="text" placeholder="Текст сообщения"></textarea>
+    </div> 
+    </div>
+    
+    <div class="form-button__center">
+        <button class="form-button" type="submit">Отправить</button>
+    </div>
+
+    </fieldset>
+  </form>
+
+</body> 
+</html>
+
