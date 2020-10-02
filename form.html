@@ -1,0 +1,90 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <meta charset="utf-8">
+  <title>form</title> 
+  <style>
+
+    .form-item {
+        margin: 20px;
+    }
+
+  </style>
+</head> 
+<body> 
+
+  <form>
+
+    <fieldset>
+        <legend>Анкета нового пользователя</legend>
+    
+    <div class="form-item">
+        <label for="name">Имя:</label>
+        <input name="name" type="text">
+    </div>
+
+    <div class="form-item">
+        <label for="surname">Фамилия:</label>
+        <input name="surname" type="text">
+    </div>
+   
+    <div class="form-item">
+        <label for="sex">Укажите пол:</label>
+          <input type="radio" name="sex" value="мужской">мужской
+          <input type="radio" name="sex" value="женский">женский
+    </div>
+
+    <div class="form-item">
+        <label for="country">Страна проживания:</label>
+        <select name="country">
+            <option value="Беларусь">Беларусь</option>
+        </select>
+    </div>
+
+    <div class="form-item">
+        <label for="language">Владение языками:</label>
+    <div>
+          <input type="checkbox" name="language" value="русский">русский
+          <input type="checkbox" name="language" value="белорусский">белорусский
+          <input type="checkbox" name="language" value="английский">английский
+    </div>
+    </div>
+
+    <div class="form-item">
+        <label for="photo">Фото профиля:</label>
+        <input name="photo" type="file">
+    </div>
+
+    <div class="form-item">
+        <label for="login">Введите логин:</label>
+        <input name="login" type="text">
+    </div>
+
+    <div class="form-item">
+        <label for="email">Введите emal:</label>
+        <input name="email" type="email">
+    </div>
+
+    <div class="form-item">
+        <label for="password">Введите пароль:</label>
+        <input name="password" type="password">
+    </div>
+
+    <div class="form-item">
+        <label for="password">Повторите пароль:</label>
+        <input name="password" type="password">
+    </div>
+
+    <hr>
+
+    <div class="form-item">
+    <button disabled type="submit">Отправить</button>
+    <button type="reset">Cancel</button>
+    </div>
+
+    </fieldset>
+  </form>
+   
+</body> 
+</html>
+
